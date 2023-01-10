@@ -314,8 +314,7 @@ header {
   top: 50%;
   left: 50%;
 
-  min-height: 581px;
-  min-width: 528px;
+padding: 40px;
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -325,15 +324,12 @@ header {
   border-radius: 4px;
 }
 
+
+
 .entrance {
-  display: flex;
-  flex-direction: row-reverse;
-  padding-top: 8px;
-  padding-right: 8px;
-
-}
-
-.div-entrance {
+  position: absolute;
+  top: 6px;
+  right: 14px;
   display: flex;
   background-position: center;
   justify-content: center;
@@ -352,8 +348,8 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.div-entrance:hover,
-.div-entrance:focus {
+.entrance:hover,
+.entrance:focus {
   fill: var(--accent-text-color);
   background-color: var(--hero-text-color);
 }
@@ -417,6 +413,15 @@ header {
   width: 448px;
   height: 120px;
   margin-bottom: 20px;
+
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  
+  color: rgba(117, 117, 117, 0.5);
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
@@ -514,6 +519,10 @@ textarea {
   position: absolute;
 }
 
+a.for{
+padding-left: 5px;
+}
+
 .box {
   display: inline-block;
 }
@@ -530,7 +539,7 @@ textarea {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked+.icon {
+.checkbox:checked +.icon {
   background-color: var(--accent-text-color);
   background-image: url(../images/icons.svg/check-mark.svg#icon-check-mark);
   fill: var(--hero-text-color);
@@ -762,9 +771,14 @@ textarea::placeholder {
 
 }
 
+.section.team{
+  background: #F5F4FA;
+}
+
 
 .section-team.list {
   display: flex;
+  
 }
 
 
@@ -1042,7 +1056,9 @@ textarea::placeholder {
   display: flex;
 }
 
+
 .form-footer input {
+  padding-left: 20px;
   width: 358px;
   height: 50px;
   margin-right: 12px;
@@ -1083,21 +1099,6 @@ textarea::placeholder {
   transform: translateY(30px);
 }
 
-
-
-
-
-
-
-
-
-
-.form-footer input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-  padding-top: 15px;
-  padding-left: 16px;
-  padding-bottom: 15px;
-}
 
 
 .form-footer button {
