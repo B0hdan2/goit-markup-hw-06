@@ -342,13 +342,25 @@ header {
   height: 30px;
   width: 30px;
 
-  background-color: var(--hero-text-color);
+
+  background: var(--hero-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.div-entrance:hover,
+.div-entrance:focus {
+  fill: var(--accent-text-color);
+  background-color: var(--hero-text-color);
+}
+
+
 .form-text {
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 
 
 
@@ -373,11 +385,7 @@ header {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  margin-bottom: 10px;
-}
-
-.form-field label {
-  padding-bottom: 4px;
+  margin-bottom: 28px;
 }
 
 .form-field input {
@@ -387,17 +395,39 @@ header {
   padding: 0px;
   width: 448px;
   height: 40px;
-  font-size: 20px;
+  font-size: 17px;
+  padding-left: 42px;
+  outline: none;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition-property: border;
+  transition-delay: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.form-field input:focus {
+  border: 1px solid var(--accent-text-color);
+  border-radius: 4px;
+}
+
 
 .form-coment textarea {
   width: 448px;
   height: 120px;
   margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  transition-property: border;
+  transition-delay: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-coment textarea:focus {
+  border: 1px solid var(--accent-text-color);
   border-radius: 4px;
 }
 
@@ -411,6 +441,7 @@ textarea {
 }
 
 .form-checkbox {
+  position: relative;
   margin-bottom: 30px;
 }
 
@@ -448,22 +479,77 @@ textarea {
   color: var(--hero-text-color);
 
 
-  background: var(--accent-text-color);
+  background: #2196F3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
-
+.button-form:hover,
+.button-form:focus {
+  background: #188CE8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
 
 .form-svg {
   position: absolute;
-  top: 34px;
-  left: 12px;
+  top: 13px;
+  left: 15px;
   fill: var(--titel-text-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus~.form-svg {
+  fill: var(--accent-text-color);
+
+
 }
 
 
-/* button */
+.checkbox {
+  appearance: none;
+  position: absolute;
+}
+
+.box {
+  display: inline-block;
+}
+
+.icon {
+  position: absolute;
+  top: 4px;
+  left: 12px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--titel-text-color);
+  border-radius: 2px;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked+.icon {
+  background-color: var(--accent-text-color);
+  background-image: url(../images/icons.svg/check-mark.svg#icon-check-mark);
+  fill: var(--hero-text-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid var(--accent-text-color);
+  border-radius: 2px;
+
+
+}
+
+textarea::placeholder {
+  padding: 12px 16px;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+
+
 .section-hero.button {
   padding: 10px 32px;
   border-radius: 4px;
@@ -963,22 +1049,55 @@ textarea {
   background-color: var(--hero-bgr-color);
 
 
-
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
 
 
+.form-fieldt {
+  position: relative;
+  display: block;
 
+}
 
+.form-label {
+  position: absolute;
+  bottom: 42px;
+  left: 35px;
+  transform: translateY(30px);
+  z-index: 2;
 
-.form-footer input [placeholder='E-mail'] {
-  padding-left: 16px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 
+.form-input:focus+.form-label,
+.form-input:not(:placeholder-shown)+.form-label {
+  color: var(--accent-text-color);
+
+  bottom: 70px;
+  left: 0px;
+  transform: translateY(30px);
+}
+
+
+
+
+
+
+
+
+
+
+.form-footer input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  padding-top: 15px;
+  padding-left: 16px;
+  padding-bottom: 15px;
+}
 
 
 .form-footer button {
@@ -1003,6 +1122,7 @@ textarea {
   top: 13px;
   right: 24px;
   fill: var(--hero-text-color);
+
 }
 
 

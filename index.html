@@ -68,42 +68,43 @@
           <div class="modal">
             <div class="entrance">
               <button class="div-entrance" data-modal-close>
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none">
-                  <path fill="#000"
-                    d="M11 1.108 9.892 0 5.5 4.392 1.108 0 0 1.108 4.392 5.5 0 9.892 1.108 11 5.5 6.608 9.892 11 11 9.892 6.608 5.5 11 1.108Z" />
+                <svg width="11" height="11">
+                  <use href="./images/icons.svg/close.svg#icon-Vector"></use>
                 </svg>
               </button>
             </div>
 
             <p class="form-text">Залиште свої дані, ми вам передзвонимо</p>
 
-            <form class="form">
+            <form class="form" autocomplete="off">
               <div class="form-field">
-                <label for="name">Ім'я</label>
-                <input type="text" name="name" id="name" />
+                <input class="form-input" type="text" name="name" id="name" placeholder=" " />
+                <label class="form-label" for="name">Ім'я</label>
 
                 <div class="form-svg">
-                  <svg>
+                  <svg width="12px" height="12px">
                     <use width="12px" height="12px" href="./images/icons.svg/symbol-defs-svg.svg#icon-name"></use>
                   </svg>
                 </div>
               </div>
 
               <div class="form-field">
-                <label for="tel">Телефон</label>
-                <input type="tel" name="tel" id="tel" />
+                <input class="form-input" type="tel" name="tel" id="tel" placeholder=" " />
+                <label class="form-label" for="tel">Телефон</label>
+
                 <div class="form-svg">
-                  <svg>
+                  <svg width="12px" height="12px">
                     <use width="12px" height="12px" href="./images/icons.svg/symbol-defs-svg.svg#icon-tel-svg"></use>
                   </svg>
                 </div>
               </div>
 
               <div class="form-field">
-                <label for="mail" class="form-label">Пошта</label>
-                <input class="form-input" type="email" name="email" id="mail" />
+                <input class="form-input" type="email" name="email" id="mail" placeholder=" " />
+                <label class="form-label" for="mail">Пошта</label>
+
                 <div class="form-svg">
-                  <svg>
+                  <svg width="12px" height="12px">
                     <use width="12px" height="12px" href="./images/icons.svg/symbol-defs-svg.svg#icon-email-svg"></use>
                   </svg>
                 </div>
@@ -111,15 +112,15 @@
 
               <div class="form-coment">
                 <label for="coment">Коментар</label>
-                <textarea name="coment" id="coment" rows="10"> </textarea>
+                <textarea name="coment" id="coment" rows="10" placeholder="Введіть текст"></textarea>
               </div>
 
               <div class="form-checkbox">
-                <input type="checkbox" name="policy" id="policy" />
-                <label for="policy">Погоджуюся з розсилкою та приймаю
-                  <span>
-                    <a href="" class="for">Умови договору</a>
-                  </span>
+                <label class="box" for="policy">Погоджуюся з розсилкою та приймаю<span><a href="" class="for">Умови
+                      договору</a></span>
+
+                  <input class="checkbox" type="checkbox" name="policy" id="policy" />
+                  <span class="icon"> </span>
                 </label>
               </div>
 
